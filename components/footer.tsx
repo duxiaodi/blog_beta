@@ -1,9 +1,7 @@
-import Container from "./container";
 import twitterIcon from "../assets/images/twitter.svg";
 import redditIcon from "../assets/images/reddit.svg";
 
-console.log(twitterIcon);
-
+// TODO: 分享地址
 const PREFIX = "http://lit-forest.github.io";
 
 const platforms = [

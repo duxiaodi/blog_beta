@@ -1,14 +1,11 @@
-import Link from 'next/link'
+import Nav from "./nav";
 
 const Header = () => {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/" className="hover:underline">
-        Blog
-      </Link>
-      .
-    </h2>
-  )
-}
+    <header className="absolute right-5 z-[9] flex items-center h-14 flex items-center">
+      <Nav />
+    </header>
+  );
+};
 
-export default Header
+export default Header;

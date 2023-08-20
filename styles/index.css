@@ -261,7 +261,7 @@ code > .line {
   left: calc(100% + 4px);
   opacity: 0.2;
 }
-a:not(.header-anchor-link, .anchor, .share) {
+a:not(.header-anchor-link, .anchor, .share, .nav-a) {
   will-change: color;
   transition: all 0.3s;
   border-bottom: 1px dotted rgba(64, 153, 255, 0.6);

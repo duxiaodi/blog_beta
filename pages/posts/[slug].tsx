@@ -3,7 +3,6 @@ import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostAnchor from "../../components/post-anchor";
 import PostBody from "../../components/post-body";
-import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
@@ -19,25 +18,23 @@ type Props = {
   preview?: boolean;
 };
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post }: Props) {
   const router = useRouter();
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `little forest | ${post.title}`;
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      {/* <Container> */}
-      {/* <Header /> */}
+    <Layout>
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
+          <Head>
+            <title>{title}</title>
+            <meta property="og:image" content={post.ogImage.url} />
+          </Head>
           <article>
-            <Head>
-              <title>{title}</title>
-              <meta property="og:image" content={post.ogImage.url} />
-            </Head>
             <PostHeader
               title={post.title}
               date={post.date}
@@ -53,7 +50,6 @@ export default function Post({ post, morePosts, preview }: Props) {
           </article>
         </>
       )}
-      {/* </Container> */}
     </Layout>
   );
 }
