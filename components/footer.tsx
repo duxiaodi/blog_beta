@@ -1,32 +1,127 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import Container from "./container";
+import twitterIcon from "../assets/images/twitter.svg";
+import redditIcon from "../assets/images/reddit.svg";
+
+console.log(twitterIcon);
+
+const PREFIX = "http://lit-forest.github.io";
+
+const platforms = [
+  {
+    name: "Twitter",
+    backgroundColor: "#55acee",
+    sharerPrefix: "https://twitter.com/intent/tweet?text=",
+    icon: twitterIcon.src,
+  },
+  {
+    name: "Reddit",
+    backgroundColor: "#0976b4",
+    sharerPrefix: "https://www.reddit.com/submit?url=",
+    icon: redditIcon.src,
+  },
+];
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      </Container>
-    </footer>
-  )
-}
+    <footer className="max-w-4xl mx-auto pt-12 pb-30">
+      {/* <Container> */}
+      <div className="border-t-1 border-[#616366] pl-4 md:pl-0">
+        <p className="mb-5">COMMENT ON:</p>
+        <ul className="m-0 p-0">
+          {platforms.map((platform) => (
+            <li className="inline-block h-9 w-12 mr-2 border-1 border-solid border-[#616366] rounded-[3px] cursor-pointer">
+              <a
+                className="share inline-block h-full w-full flex items-center justify-center"
+                target="_blank"
+                // href={`https://twitter.com/intent/tweet?text=http://lit-forest.github.io${slug}`}
+              >
+                <img
+                  src={platform.icon}
+                  alt={platform.name}
+                  className="h-5 w-5"
+                />
+                {/* <i className="icon-twitter"></i> */}
+              </a>
+            </li>
+          ))}
 
-export default Footer
+          {/* <li style={{ display: "inline-block", marginRight: "0.5em" }}>
+              <a
+                style={{
+                  padding: "8px 17px",
+                  border: "1px solid #abb0b7",
+                  borderRadius: 3,
+                  fontSize: 14,
+                  fontWeight: 400,
+                  color: "#333",
+                  transition: "all .2s",
+                  ":hover": {
+                    backgroundColor: "#3b5998",
+                    color: "#fff",
+                  },
+                }}
+                target="_blank"
+                // href={`https://www.facebook.com/sharer/sharer.php?u=http://lit-forest.github.io${slug}`}
+              >
+                <i className="icon-facebook"></i>
+                <span style={{ display: "none" }} className="share">
+                  Facebook
+                </span>
+              </a>
+            </li>
+            <li style={{ display: "inline-block", marginRight: "0.5em" }}>
+              <a
+                style={{
+                  padding: "8px 17px",
+                  border: "1px solid #abb0b7",
+                  borderRadius: 3,
+                  fontSize: 14,
+                  fontWeight: 400,
+                  color: "#333",
+                  transition: "all .2s",
+                  ":hover": {
+                    backgroundColor: "#dd4b39",
+                    color: "#fff",
+                  },
+                }}
+                target="_blank"
+                // href={`https://plus.google.com/share?url=http://lit-forest.github.io${slug}`}
+              >
+                <i className="icon-google-plus"></i>
+                <span style={{ display: "none" }} className="share">
+                  Google+
+                </span>
+              </a>
+            </li>
+            <li style={{ display: "inline-block", marginRight: "0.5em" }}>
+              <a
+                style={{
+                  padding: "8px 17px",
+                  border: "1px solid #abb0b7",
+                  borderRadius: 3,
+                  fontSize: 14,
+                  fontWeight: 400,
+                  color: "#333",
+                  transition: "all .2s",
+                  ":hover": {
+                    backgroundColor: "#0976b4",
+                    color: "#fff",
+                  },
+                }}
+                target="_blank"
+                // href={`https://www.reddit.com/submit?url=http://lit-forest.github.io${slug}`}
+              >
+                <i className="icon-reddit"></i>
+                <span style={{ display: "none" }} className="share">
+                  Reddit
+                </span>
+              </a>
+            </li> */}
+        </ul>
+      </div>
+      {/* </Container> */}
+    </footer>
+  );
+};
+
+export default Footer;

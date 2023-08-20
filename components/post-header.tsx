@@ -1,36 +1,36 @@
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import PostTitle from './post-title'
-import type Author from '../interfaces/author'
+import Avatar from "./avatar";
+import DateFormatter from "./date-formatter";
+import CoverImage from "./cover-image";
+import PostTitle from "./post-title";
+import type Author from "../interfaces/author";
+import { useEffect, useState } from "react";
 
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  author: Author
-}
+  title: string;
+  date: string;
+  author: Author;
+  excerpt: string;
+};
 
-const PostHeader = ({ title, coverImage, date, author }: Props) => {
+const PostHeader = ({ title, excerpt, date, author }: Props) => {
   return (
-    <>
-      <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        <Avatar name={author.name} picture={author.picture} />
+    <div className="relative h-[230px] md:h-[500px] flex flex-col justify-center text-white">
+      <div className="absolute w-full h-full left-0 right-0 after:content-[''] after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[rgba(0,0,0,0.1)]">
+        <img
+          className="object-cover w-full h-full"
+          title={title}
+          src={"https://source.unsplash.com/random"}
+        />
       </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} />
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
-        <div className="mb-6 text-lg">
+      <div className="relative md:w-[66%] mx-auto px-16">
+        <PostTitle>{title}</PostTitle>
+        <span className="hidden md:block mb-6">{excerpt}</span>
+        <div className="text-center md:text-left">
           <DateFormatter dateString={date} />
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default PostHeader
+export default PostHeader;
