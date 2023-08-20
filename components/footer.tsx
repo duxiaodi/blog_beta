@@ -23,11 +23,14 @@ const Footer = () => {
   return (
     <footer className="max-w-4xl mx-auto pt-12 pb-30">
       {/* <Container> */}
-      <div className="border-t-1 border-[#616366] pl-4 md:pl-0">
+      <div className="border-t-1 border-[#e9e1e1] dark:border-[#414141] pl-4 md:pl-0">
         <p className="mb-5">COMMENT ON:</p>
         <ul className="m-0 p-0">
           {platforms.map((platform) => (
-            <li className="inline-block h-9 w-12 mr-2 border-1 border-solid border-[#616366] rounded-[3px] cursor-pointer">
+            <li
+              key={platform.name}
+              className="inline-block h-9 w-12 mr-2 border-1 border-solid border-[#e9e1e1] dark:border-[#414141] rounded-[3px] cursor-pointer"
+            >
               <a
                 className="share inline-block h-full w-full flex items-center justify-center"
                 target="_blank"

@@ -38,7 +38,6 @@ export default function Post({ post }: Props) {
             <PostHeader
               title={post.title}
               date={post.date}
-              author={post.author}
               excerpt={post.excerpt}
             />
             <Container>
