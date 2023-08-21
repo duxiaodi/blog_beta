@@ -3,7 +3,7 @@ import PostTitle from "./post-title";
 
 export type Props = {
   title: string;
-  date: string;
+  date: number;
   excerpt: string;
 };
 

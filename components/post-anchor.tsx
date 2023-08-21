@@ -14,6 +14,7 @@ const PostAnchor = ({ anchors }: Props) => {
     () => Math.min(...anchors.map((anchor) => anchor.level)),
     [anchors]
   );
+  if (!anchors.length) return null;
   return (
     <nav className="max-w-xs sticky top-16 hidden md:block">
       <h2 className="mb-3 lg:mb-3 uppercase tracking-wide font-bold text-sm text-secondary dark:text-secondary-dark px-4 w-full">

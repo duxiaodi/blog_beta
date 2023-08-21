@@ -5,7 +5,7 @@ import twitterIcon from "../assets/images/twitter.svg";
 // TODO: 完善跳转逻辑
 function Nav() {
   return (
-    <nav className="text-white flex items-center gap-3 md:gap-6 text-12 sm:text-13">
+    <nav className="flex items-center gap-3 md:gap-6 text-12 sm:text-13">
       <Link as={`/`} href="/" className="cursor-pointer">
         HOME
       </Link>
