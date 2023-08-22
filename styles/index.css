@@ -12,6 +12,7 @@
   --foreground-rgb: rgb(35, 39, 47);
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --sub-text: rgb(102, 102, 102);
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -74,6 +75,7 @@
     --foreground-rgb: rgb(246 247 249);
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --sub-text: rgb(161, 161, 161);
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -112,6 +114,10 @@
     --sp-colors-surface1: #16181d;
     --sp-colors-code-inline: #323232;
   }
+}
+
+.sub-text {
+  color: var(--sub-text);
 }
 
 .line {

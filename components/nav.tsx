@@ -9,8 +9,9 @@ function Nav() {
       <Link as={`/`} href="/" className="cursor-pointer">
         HOME
       </Link>
-      <a>ARCHIVE</a>
-      <a>CATEGORIES</a>
+      <Link as={`/categories`} href="/categories" className="cursor-pointer">
+        CATEGORIES
+      </Link>
       <a>RESUME</a>
       <Link
         as="https://github.com/sylvenas"
