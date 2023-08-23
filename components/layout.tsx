@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import Header from "./header";
 import Meta from "./meta";
 
@@ -13,6 +14,7 @@ const Layout = ({ children }: Props) => {
       <div className="min-h-screen">
         <main>{children}</main>
       </div>
+      <Analytics />
     </>
   );
 };

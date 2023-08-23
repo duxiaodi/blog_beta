@@ -6,6 +6,7 @@ specifiers:
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
   '@unocss/postcss': ^0.55.1
+  '@vercel/analytics': ^1.0.2
   autoprefixer: ^10.4.7
   classnames: ^2.3.1
   date-fns: ^2.28.0
@@ -23,6 +24,7 @@ specifiers:
   unocss: ^0.55.1
 
 dependencies:
+  '@vercel/analytics': 1.0.2
   classnames: 2.3.2
   date-fns: 2.30.0
   debounce: 1.2.1
@@ -520,6 +522,10 @@ packages:
     transitivePeerDependencies:
       - rollup
     dev: true
+
+  /@vercel/analytics/1.0.2:
+    resolution: {integrity: sha512-BZFxVrv24VbNNl5xMxqUojQIegEeXMI6rX3rg1uVLYUEXsuKNBSAEQf4BWEcjQDp/8aYJOj6m8V4PUA3x/cxgg==}
+    dev: false
 
   /abab/2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
