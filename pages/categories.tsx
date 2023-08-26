@@ -22,7 +22,10 @@ export default function Index({ collections }: Props) {
         </Head>
         <div className="columns-1 md:columns-3 gap-x-6 px-4 pt-2 md:pt-20 max-w-7xl mx-auto">
           {categories.map((category) => (
-            <div key={category} className="py-5 px-6 mb-6">
+            <div
+              key={category}
+              className="py-5 px-6 mb-6 break-inside-avoid-column"
+            >
               <h2 className="text-18 font-500 mb-3 mt-0 leading-snug">
                 {category}
               </h2>
