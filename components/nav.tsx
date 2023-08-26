@@ -12,7 +12,9 @@ function Nav() {
       <Link as={`/categories`} href="/categories" className="cursor-pointer">
         CATEGORIES
       </Link>
-      <a>RESUME</a>
+      <Link as={`/resume`} href="/resume" className="cursor-pointer">
+        RESUME
+      </Link>
       <Link
         as="https://github.com/sylvenas"
         href="https://github.com/sylvenas"

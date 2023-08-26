@@ -242,6 +242,11 @@ pre > code {
   text-shadow: none !important;
 }
 
+.post-body li {
+  @apply my-4 text-[14px] leading-[1.8];
+  color: var(--foreground-rgb);
+}
+
 p {
   @apply my-4 text-[14px] leading-[1.8];
   color: var(--foreground-rgb);
