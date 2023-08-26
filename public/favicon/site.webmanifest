@@ -1,16 +1,16 @@
 {
-  "name": "Next.js",
-  "short_name": "Next.js",
+  "name": "Little Forest",
+  "short_name": "Little Forest",
   "icons": [
     {
-      "src": "/favicons/android-chrome-192x192.png",
+      "src": "/favicons/logo.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpg"
     },
     {
-      "src": "/favicons/android-chrome-512x512.png",
+      "src": "/favicons/logo.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpg"
     }
   ],
   "theme_color": "#000000",
