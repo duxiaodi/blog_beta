@@ -8,7 +8,6 @@ import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
 
@@ -42,7 +41,7 @@ export default function Post({ post }: Props) {
             />
             <Container>
               <div className="flex items-start">
-                <PostBody content={post.content} />
+                <PostBody content={post.content} slug={post.slug} />
                 <PostAnchor anchors={post.anchors} />
               </div>
             </Container>
