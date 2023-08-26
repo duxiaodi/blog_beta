@@ -1,10 +1,8 @@
 import Head from "next/head";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
+import Link from "next/link";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Post from "../interfaces/post";
-import Link from "next/link";
 
 type Props = {
   collections: {
