@@ -35,6 +35,7 @@ export default function Post({ post }: Props) {
           </Head>
           <article>
             <PostHeader
+              key={post.title}
               title={post.title}
               date={post.date}
               excerpt={post.excerpt}
