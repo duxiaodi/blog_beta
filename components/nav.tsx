@@ -4,7 +4,7 @@ import twitterIcon from "../assets/images/twitter.svg";
 
 function Nav() {
   return (
-    <nav className="flex items-center justify-between sm:justify-start w-full gap-3 md:gap-6 text-12 sm:text-13 text-white">
+    <nav className="flex items-center justify-between sm:justify-center w-full gap-3 md:gap-24 text-12 sm:text-13 text-white">
       <div className="flex items-center gap-4 md:gap-6">
         <Link as={`/`} href="/" className="cursor-pointer">
           HOME
