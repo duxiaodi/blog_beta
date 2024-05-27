@@ -1,6 +1,6 @@
 import twitterIcon from "../assets/images/twitter.svg";
 import redditIcon from "../assets/images/reddit.svg";
-import githubIcon from "../assets/images/github.svg";
+import githubIcon from "../assets/images/github2.svg";
 
 const PREFIX = "http://sylvenas.github.io/posts/";
 
