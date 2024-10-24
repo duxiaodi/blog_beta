@@ -20,8 +20,8 @@ const StaticInfo = () => (
   <div>
     <h2>About</h2>
     <p>
-      Tao Zhao lives in HangZhou, ZheJiang. He likes basketball, books, games
-      and travel.
+      Tyran lives in HangZhou, ZheJiang. He likes basketball, books, games and
+      travel.
     </p>
     <p className="font-600">Math is my next programming language.</p>
     <br />
@@ -33,10 +33,10 @@ const StaticInfo = () => (
     </p>
     <LitterForest />
     <p className="resume-p">
-      I am a senior front-end developer with 6 years of experience, and a
+      I am a senior front-end developer with 7 years of experience, and a
       code-aholic, invested a lot of time in the open source community,
       developing and maintaining several projects. I love to summarize & share.I
-      originally joined the Cloud Music team at NetEase in Apr 2017, tasked to
+      originally joined the Cloud Music team at NetEase in Apr 2019, tasked to
       revamp the event details pages from an archaic MySpace-style design to a
       modern, fully responsive layout.
     </p>
