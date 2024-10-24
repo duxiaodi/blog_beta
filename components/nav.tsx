@@ -16,7 +16,7 @@ function Nav() {
           RESUME
         </Link>
       </div>
-      <div className="flex items-center gap-4 md:gap-6">
+      {/* <div className="flex items-center gap-4 md:gap-6">
         <Link
           as="https://github.com/sylvenas"
           href="https://github.com/sylvenas"
@@ -41,7 +41,7 @@ function Nav() {
             className="h-5 w-5 flex-shrink-0"
           />
         </Link>
-      </div>
+      </div> */}
     </nav>
   );
 }
